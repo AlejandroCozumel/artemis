@@ -101,14 +101,14 @@ export default function App() {
         <div className="layer" />
         <Loading />
         <a
-          href="https://github.com/AlejandroCozumel"
+          href="https://daliaempower.com/"
           className="top-left"
-          children="Github"
+          children="Dalia"
         />
         <a
-          href="https://twitter.com/elonmusk"
+          href="https://diarq.com/"
           className="top-right"
-          children="Twitter"
+          children="Diarq"
         />
       </div>
     </>
