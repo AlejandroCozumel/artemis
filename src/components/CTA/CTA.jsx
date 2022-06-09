@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { Link } from "react-router-dom";
 import "./cta.scss";
 import Lottie from "react-lottie";
@@ -8,8 +8,36 @@ import { HiBadgeCheck } from "react-icons/hi";
 import { SiGooglemessages } from "react-icons/si";
 import { RiComputerFill } from "react-icons/ri";
 import Marquee from "react-fast-marquee";
+import {
+  motion,
+  useAnimation,
+} from "framer-motion/dist/framer-motion";
+import { useInView } from "react-intersection-observer";
+// import { useAnimation } from "framer-motion";
 
 const CTA = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+  const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1.5,
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({
+        x: "-100vw",
+      });
+    }
+  }, [inView, animation]);
+
   const rocketOptions = {
     loop: true,
     autoplay: true,
@@ -47,20 +75,24 @@ const CTA = () => {
   return (
     <>
       <section className="container" id="container">
-        <div className="first-block">
-          <h2>
-            <span className="gradient-text">Artemis</span> es la primera
-            <span className="gradient-text"> plataforma integral</span> diseñada
-            para
-            <span className="gradient-text"> revolucionar </span> la forma como
-            <span className="gradient-text"> conectamos </span> con las empresas
-          </h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut animi
-            ab sint soluta iure consectetur, excepturi deserunt explicabo sunt
-            incidunt illum, vitae eius itaque reiciendis? Pariatur harum totam
-            exercitationem numquam?
-          </p>
+        <div className="parent-first" ref={ref}>
+          <motion.div className="first-block" animate={animation}>
+            <h2>
+              <span className="gradient-text">Artemis</span> es la primera
+              <span className="gradient-text"> plataforma integral</span>{" "}
+              diseñada para
+              <span className="gradient-text"> revolucionar </span> la forma
+              como
+              <span className="gradient-text"> conectamos </span> con las
+              empresas
+            </h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut
+              animi ab sint soluta iure consectetur, excepturi deserunt
+              explicabo sunt incidunt illum, vitae eius itaque reiciendis?
+              Pariatur harum totam exercitationem numquam?
+            </p>
+          </motion.div>
         </div>
         <div className="flex">
           <Lottie options={rocketOptions} height={300} width={300} />
