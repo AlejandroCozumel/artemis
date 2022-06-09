@@ -117,7 +117,7 @@ const CTA = () => {
           </div>
           <div className="slide">
             <img
-              src="http://assets.stickpng.com/images/58480fd7cef1014c0b5e4943.png"
+              src="https://www.freepnglogos.com/uploads/microsoft-logo-hd-26.png"
               alt="Microsoft logo"
               height={60}
               width={300}
