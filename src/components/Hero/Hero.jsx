@@ -4,7 +4,7 @@ import { Canvas, useLoader } from "react-three-fiber";
 import { useTransition, a } from "react-spring";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls, draco } from "drei";
-import './index.css'
+import './hero.scss'
 
 function Model({ url }) {
   const { nodes, materials } = useLoader(GLTFLoader, url, draco());
@@ -64,11 +64,12 @@ export default function App() {
   return (
     <>
       <div className="bg">
-        <h1>
+        <h1 className="gradient-text">
           Artemis
           <br />
           <span>Launch</span>
         </h1>
+        <input placeholder="Subscríbete" />
         <Canvas shadowMap camera={{ position: [0, 0, 15] }}>
           <ambientLight intensity={0.75} />
           <pointLight intensity={1} position={[-10, -25, -10]} />
@@ -100,19 +101,14 @@ export default function App() {
         <div className="layer" />
         <Loading />
         <a
-          href="https://github.com/drcmda/learnwithjason"
+          href="https://github.com/AlejandroCozumel"
           className="top-left"
           children="Github"
         />
         <a
-          href="https://twitter.com/0xca0a"
+          href="https://twitter.com/elonmusk"
           className="top-right"
           children="Twitter"
-        />
-        <a
-          href="https://github.com/drcmda/react-three-fiber"
-          className="bottom-left"
-          children="+ react-three-fiber"
         />
       </div>
     </>

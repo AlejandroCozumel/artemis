@@ -1,0 +1,234 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 999;
+}
+.nav-center {
+  width: 90vw;
+}
+.nav-header {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-header img {
+  width: 200px;
+  margin-left: -6px;
+  margin-bottom: -9px;
+}
+.nav-btn {
+  padding: 0.15rem 0.75rem;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+}
+.nav-btn svg {
+  font-size: 2rem;
+  color: gray;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out all;
+}
+.show-links {
+  height: fit-content;
+}
+
+.nav-link {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  color: gray;
+  letter-spacing: 1px;
+  padding: 0.7rem 0;
+  transition: 0.3s ease-in-out all;
+}
+.nav-link:hover {
+  color: black;
+}
+.active-link {
+  color: black;
+}
+.contact-link {
+  display: flex;
+  justify-content: center;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  a {
+    padding: 0.15rem 0.5rem;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    color: gray;
+    letter-spacing: 1px;
+  }
+  .cart-icon {
+    padding-top: 5px;
+  }
+  .cart-icon:hover {
+    color: black;
+  }
+  a:hover {
+    color: black;
+  }
+}
+
+// @media screen and (min-width: 992px) {
+//   .navbar {
+//     padding: 15px 0;
+//   }
+//   .nav-center {
+//     display: flex;
+//     align-items: baseline;
+//   }
+//   .nav-header {
+//     padding: 0;
+//     margin-right: 2rem;
+//     height: auto;
+//     flex: 1;
+//   }
+
+//   .nav-btn {
+//     display: none;
+//   }
+//   .nav-links {
+//     height: auto !important;
+//     flex-direction: row;
+//     align-items: center;
+//     width: 100%;
+//     justify-content: space-between;
+//     flex: 4;
+//   }
+//   .nav-link {
+//     padding: 0;
+//     border-top: none;
+//     margin-right: 1rem;
+//     font-size: 1rem;
+//     text-decoration: none;
+//     flex: 1;
+//   }
+// }
+
+// .show-links {
+//   a {
+//     display: block;
+//     text-align: center;
+//     font-size: 1rem;
+//     text-decoration: none;
+//     color: $gray;
+//     letter-spacing: 1px;
+//   }
+//   .cart-text {
+//     padding: 0.7rem 0;
+//   }
+//   .cart-icon {
+//     padding: 0.7rem 0;
+//   }
+//   .cart-icon:hover {
+//     color: $black;
+//   }
+//   a:hover {
+//     color: $black;
+//   }
+// }
+
+// .search-box {
+//   width: 60%;
+//   position: relative;
+//   ul {
+//     margin: 0;
+//   }
+//   input {
+//     width: 100%;
+//     height: 40px;
+//     border: 1px solid gray;
+//     border-radius: 5px;
+//     padding-left: 20px;
+//   }
+//   p {
+//     background-color: white;
+//     width: 100%;
+//     position: absolute;
+//     top: 20px;
+//     z-index: 10;
+//     padding: 0 20px;
+//     font-weight: 300;
+//     font-size: 1.3rem;
+//   }
+//   .search-list {
+//     background-color: white;
+//     width: 100%;
+//     position: absolute;
+//     top: 40px;
+//     z-index: 10;
+//     padding: 0 20px;
+//     list-style: none;
+//     .search {
+//       border-bottom: 1px solid gray;
+//       a {
+//         li {
+//           padding: 10px 0;
+//           font-weight: 300;
+//           font-size: 1.3rem;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 991px) {
+//   .contact-link {
+//     display: none;
+//   }
+// }
+
+// .nav-tags {
+//   margin: 0 auto;
+//   padding: 10px 7.5%;
+//   background-color: $lightGray;
+//   display: flex;
+//   justify-content: space-evenly;
+//   align-items: center;
+//   .search-icon {
+//     cursor: pointer;
+//   }
+//   .slash {
+//     font-size: 1.5rem;
+//     font-weight: 400;
+//   }
+//   .link {
+//     display: flex;
+//     justify-content: space-evenly;
+//     align-items: center;
+//     h3 {
+//       margin: 0;
+//       font-weight: 300;
+//       font-style: italic;
+//       font-size: 1rem;
+//     }
+//   }
+//   a {
+//     text-decoration: none;
+//     color: $black;
+//   }
+// }
+
+// @include media("<=phone") {
+//   .search-box {
+//     width: 70%;
+//   }
+// }
