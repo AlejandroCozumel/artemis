@@ -4,7 +4,7 @@ import { Canvas, useLoader } from "react-three-fiber";
 import { useTransition, a } from "react-spring";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls, draco } from "drei";
-import './hero.scss'
+import "./hero.scss";
 
 function Model({ url }) {
   const { nodes, materials } = useLoader(GLTFLoader, url, draco());
@@ -70,6 +70,14 @@ export default function App() {
           <span>Launch</span>
         </h1>
         <input placeholder="Subscríbete" />
+        <a href="#container" class="scroll-down">
+            <div class="mouse">
+                <span></span>
+            </div>
+            <div class="arrow">
+                <span></span>
+            </div>
+        </a>
         <Canvas shadowMap camera={{ position: [0, 0, 15] }}>
           <ambientLight intensity={0.75} />
           <pointLight intensity={1} position={[-10, -25, -10]} />
@@ -105,11 +113,7 @@ export default function App() {
           className="top-left"
           children="Dalia"
         />
-        <a
-          href="https://diarq.com/"
-          className="top-right"
-          children="Diarq"
-        />
+        <a href="https://diarq.com/" className="top-right" children="Diarq" />
       </div>
     </>
   );
